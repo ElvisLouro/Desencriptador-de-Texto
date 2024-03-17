@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --fonte-primaria: 'Inter', sans-serif;
+
+    --cor-primaria: #F3F5FC; 
+    --cor-secundaria: #0A3871;
+    --cor-terciaria: #FFFFFF;
+    --cor-quartenaria: #D8DFE8;
+    --cor-quintenaria: #495057;
+
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: var(--fonte-primaria);
+    background-color: var(--cor-primaria);
+    box-sizing: border-box;
+    height: 85vh;
+}
+
+.logo {
+    margin: 2%;
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: left;
+    height: 90%;
+}
+
+.lado__esquerdo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.container__input {
+    display: flex;
+    outline: none;
+    width: 100%;
+    height: 80%;
+    margin: 0px;
+    padding: 5px; 
+    background-color: var(--cor-primaria);
+    border: var(--cor-primaria);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    text-wrap: wrap;
+    resize: none;
+    color:var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+}
+
+#informacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.container__botoes {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+    padding: 3vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.container__botao {
+    display: flex;
+    width: 200px;
+    height:60px;
+    padding: 2.5%;
+    align-items: center;
+    border-radius: 24px;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    justify-content: center;
+    border: var(--cor-secundaria) solid 1px;
+   
+    
+}
+
+#cripto {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+#decripto {
+    background: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+}
+
+.container__output {
+    width: 35%;
+    height: 100%;
+    border-radius: 24px;
+    background: var(--cor-quaternaria);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    text-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
+    overflow-x: clip;
+}
+
+.texto__output {
+    display: flex;
+    text-wrap: wrap;
+    flex-direction: column;
+    word-break: break-word;
+    text-align: left;
+    max-width: 85%;
+}
+
+
+#sem_mensagem {
+    text-align: center;
+    color: #343A40;
+
+}
+
+#observacao {
+    font-size: 1rem;
+    color: #495057;
+    text-align: center;
+}
+
+#botaoCopia {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-primaria);
+    border: #0A3871 1px solid;
+    color: var(--cor-secundaria);
+}
+
+#rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+
+    
+}
+
+#barra__embaixo {
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.1rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+#rodape img {
+    width: 0.9rem;
+} 
+
+@media (hover: hover){
+    #cripto:hover {
+        background-color: var(--cor-terciaria);
+        color: var(--cor-secundaria);
+        transition: 0.6s;
+    }
+    #decripto:hover {
+        background-color: var(--cor-secundaria);
+        color: var(--cor-primaria);
+        transition: 0.6s;
+    }
+
+
+
+    #botaoCopia:hover {
+        background-color: var(--cor-secundaria);
+        color: var(--cor-primaria);
+        transition: 0.6s;
+    }
+}
+@media (hover: none){
+    #cripto:active {
+        background-color: var(--cor-terciaria);
+        color: var(--cor-secundaria);
+        transition: 0.1;
+    }
+
+    #decripto:active {
+        background-color: var(--cor-secundaria);
+        color: var(--cor-primaria);
+        transition: 0.1s;
+    }
+
+    #botaoCopia:active {
+        background-color: var(--cor-secundaria);
+        color: var(--cor-primaria);
+        transition: 0.1s;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) and (min-width: 376px) {
+    .principal {
+        flex-direction: column;
+        padding: 0%;
+        width: 100vw;
+        border: 0;
+        justify-content: space-between;
+        height: 82vh;
+    }
+
+    .lado__esquerdo{
+        width: 90vw;
+        height: 58%;
+        padding: 0;
+        align-self: center;
+        
+    }
+
+    .container__botoes {
+        flex-direction: row;
+        margin: 2%;
+        padding: 0;
+        border: 0;
+        gap: 6px;
+        
+    }
+
+    .container__botao {
+        margin: 0;
+        width: 100%; 
+        height: 7vh;
+        height: 60px;
+    }
+
+    .container__input {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        min-width: 80%;    
+        max-width: 100%;
+        min-height: 40%;
+        justify-content: left;
+    }
+
+    .container__output {
+        margin: 0%;
+        padding: 0;
+        border: 0;
+        height: 40%;
+        padding: 2%;
+        width: 90vw;
+    }
+
+    #desenho {
+        display: none;
+    }
+    
+    #botaoCopia {
+        width: 50%;
+    }
+    #observacao {
+        text-wrap: wrap;
+    }
+
+    .logo{
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .principal {
+        flex-direction: column;
+        padding: 0%;
+        width: 100vw;
+        border: 0;
+        justify-content: space-between;
+        height: 82vh;
+    }
+
+    .lado__esquerdo{
+        width: 90vw;
+        height: 68%;
+        padding: 0;
+        align-self: center;
+        
+    }
+
+    .container__botoes {
+        flex-direction: column;
+        margin: 2%;
+        padding: 0;
+        border: 0;
+        gap: 6px;
+    }
+
+    .container__botao {
+        margin: 0;
+        width: 80vw; 
+        height: 60px;
+    }
+
+    .container__input {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        min-width: 80%;    
+        max-width: 100%;
+        min-height: 40%;
+        justify-content: left;
+    }
+
+    .container__output {
+        margin: 0%;
+        padding: 0;
+        border: 0;
+        height: 30%;
+        padding: 2%;
+        width: 90vw;
+    }
+
+    #desenho {
+        display: none;
+    }
+
+    #observacao {
+        text-wrap: wrap;
+    }
+
+    #botaoCopia {
+        width: 89%;
+    }
+
+    .logo{
+        padding: 2%;
+    }
+}
+
